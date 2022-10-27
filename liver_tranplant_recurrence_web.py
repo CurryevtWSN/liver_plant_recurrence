@@ -44,7 +44,7 @@ vascular_invasion = map[vascular_invasion]
 BCLC = map[BCLC]
 
 # 数据读取，特征标注
-hp_train = pd.read_csv('E:\\Spyder_2022.3.29\\output\\machinel\\lrq_output\\lrq_pre_r\\Preoperative_data_of_liver_transplantation_for_liver_cancer_2.csv')
+hp_train = pd.read_csv('Preoperative_data_of_liver_transplantation_for_liver_cancer_2.csv')
 hp_train['Recurrence'] = hp_train['Recurrence'].apply(lambda x : +1 if x==1 else 0)
 features =["tumor_size","tumor_single","vascular_invasion","BCLC",'Fibrinogen','WBC','N','plt',"M",'NLR','PLR','LMR']
 target = 'Recurrence'
